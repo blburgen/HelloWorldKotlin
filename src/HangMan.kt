@@ -2,7 +2,7 @@ import java.util.*
 
 fun main() {
     // Start the Game
-    var category = startGame()
+    val category = startGame()
 
     // Select a random word
     var word = randomWord(category)
@@ -21,12 +21,12 @@ fun main() {
         hangman(errors)
         println(finalGuess)
         println("please guess a letter: ")
-        var guess: String = readln().lowercase()
+        val guess: String = readln().lowercase()
 
         if( word.contains(guess) ) {
             println("Correct!")
 
-            var index = word.indexOf(guess)
+            val index = word.indexOf(guess)
 
             finalGuess = finalGuess.substring(0, index) + guess + finalGuess.substring(index + 1)
 
